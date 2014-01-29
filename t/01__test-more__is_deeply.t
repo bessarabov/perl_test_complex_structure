@@ -1,5 +1,4 @@
 use Test::More;
-use Test::Deep;
 
 my $got = [
     {
@@ -19,20 +18,20 @@ my $expected = [
     },
 ];
 
-cmp_deeply(
+is_deeply(
     $got,
     $expected,
-    'cmp_deeply',
+    'is_deeply',
 );
 
 done_testing();
 __END__
 
-not ok 1 - cmp_deeply
-#   Failed test 'cmp_deeply'
-#   at t/03__test-deep__cmp_deeply.t line 22.
-# Compared array length of $data
-#    got : array with 1 element(s)
-# expect : array with 2 element(s)
+not ok 1 - is_deeply
+#   Failed test 'is_deeply'
+#   at t/01__test-more__is_deeply.t line 21.
+#     Structures begin differing at:
+#          $got->[0]{color} = 'green'
+#     $expected->[0]{color} = Does not exist
 1..1
 # Looks like you failed 1 test of 1.

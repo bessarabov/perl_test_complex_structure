@@ -30,7 +30,7 @@ __END__
 
 not ok 1 - eq_or_diff
 #   Failed test 'eq_or_diff'
-#   at t/04__test-differences__eq_or_diff.t line 22.
+#   at t/03__test-differences__eq_or_diff.t line 22.
 # +----+-----------------------+----+---------------+
 # | Elt|Got                    | Elt|Expected       |
 # +----+-----------------------+----+---------------+

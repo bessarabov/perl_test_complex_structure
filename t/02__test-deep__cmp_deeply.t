@@ -1,4 +1,5 @@
 use Test::More;
+use Test::Deep;
 
 my $got = [
     {
@@ -18,19 +19,20 @@ my $expected = [
     },
 ];
 
-is(
+cmp_deeply(
     $got,
     $expected,
-    'is',
+    'cmp_deeply',
 );
 
 done_testing();
 __END__
 
-not ok 1 - is
-#   Failed test 'is'
-#   at t/01__test-more__is.t line 21.
-#          got: 'ARRAY(0x16ebcb0)'
-#     expected: 'ARRAY(0x1718540)'
+not ok 1 - cmp_deeply
+#   Failed test 'cmp_deeply'
+#   at t/02__test-deep__cmp_deeply.t line 22.
+# Compared array length of $data
+#    got : array with 1 element(s)
+# expect : array with 2 element(s)
 1..1
 # Looks like you failed 1 test of 1.
